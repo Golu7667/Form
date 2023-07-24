@@ -22,7 +22,7 @@ function Register() {
     // e.preventDefault();
     const {name,email,password,reEnterpassword}=user
     if(name && email && password &&(password===reEnterpassword)){
-      await axios.post("http://localhost:8000/register",{
+      await axios.post("https://form-vmea.onrender.com/register",{
         user
        })
       .then(res=>{alert(res.data.massage)

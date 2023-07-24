@@ -17,12 +17,20 @@ function Login ({setLoginUser}) {
        })
     }
     const login=()=>{
-      axios.post("http://localhost:8000/login",user)
-      .then(res=>{
-        alert(res.data.massage)
-        setLoginUser(res.data.user)
+     const data= axios.post("https://form-vmea.onrender.com/login",user)
+    
+     
+      data.then(res=>{
+         alert(res.data.massage)
+       
+        if(res.data.massage="Login Successful"){
+          setLoginUser(res.data.user) 
         history("/")
+        }
       })
+      
+     
+    
     }
   return (
     <div className='login'>

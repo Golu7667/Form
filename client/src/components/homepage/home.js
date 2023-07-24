@@ -6,7 +6,7 @@ import {BsFillPersonFill}  from "react-icons/bs"
 
 function Home(props){
     const history=useNavigate()
-    console.log(props.email)
+   
     return(
         <div className='home'>
            <h1>home</h1>
