@@ -12,7 +12,7 @@ app.use(cors({origin:"*"}));
 mongoose.set('strictQuery', false);
 
 //mongoose connection
-mongoose.connect(process.env.db,{
+mongoose.connect(process.env.DB,{
     useNewUrlParser:true,
     useUnifiedTopology:true 
 }).then(()=>{
