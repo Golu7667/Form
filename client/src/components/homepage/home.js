@@ -10,7 +10,7 @@ function Home(props){
     return(
         <div className='home'>
            <h1>home</h1>
-           <BsFillPersonFill/>
+           <BsFillPersonFill/> 
            <h4>{props.email}</h4>
            <div className='button' onClick={()=>history("/login")} >Logout</div>
         </div>
