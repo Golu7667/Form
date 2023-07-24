@@ -38,15 +38,15 @@ app.post("/login",(req,res)=>{
     User.findOne({email:email},(err,user)=>{
         if(user){
                 if(password===user.password){
-                    res.send({massage:"Login Successful",user:user})
+                    res.status(200).send({massage:"Login Successful",user:user})
                     
                 }else{
-                    res.send({massage:"Password didn't match"})
+                    res.status(401).send({massage:"Password didn't match"})
                    
                 }
         }else{
            
-            res.send({massage:"User not registered"})
+            res.status(401).send({massage:"User not registered"})
         }
     })
 })
