@@ -77,6 +77,10 @@ app.post("/register",(req,res)=>{
   
 });
 
+//test server 
+app.get("/",()=>{
+   app.send("server is connected")
+})
 //server connection
 app.listen(process.env.PORT,()=>{
     console.log("server 8000"); 
